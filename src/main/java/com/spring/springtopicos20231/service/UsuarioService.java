@@ -1,6 +1,7 @@
 package com.spring.springtopicos20231.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,4 +28,12 @@ public class UsuarioService {
         return usuarioRepo.findAll();
     }
     
+    
+    public Usuario buscarPorId(Long id) {
+        Optional<Usuario> usuarioOp = usuarioRepo.findById(id);
+        if(usuarioOp.isEmpty()) {
+            throw new IllegalArgumentException("Usuário não existe!");
+        }
+        return usuarioOp.get();
+    }
 }
