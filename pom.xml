@@ -14,7 +14,7 @@
 	<name>spring-topicos20231</name>
 	<description>Projeto Spring didático</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
