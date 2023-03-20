@@ -1,4 +1,4 @@
-package com.spring.springtopicos20231.entity;
+/* package com.spring.springtopicos20231.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -55,4 +55,4 @@ public class Anotacoes {
         this.dataAtualizado = dataAtualizado;
     }
     
-}
+} */

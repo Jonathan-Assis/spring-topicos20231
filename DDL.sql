@@ -13,7 +13,7 @@ create table if not exists usr_usuario (
   primary key (usr_id),
   unique key uni_usuario_nome (usr_nome)
 );
-
+/* 
 create table if not exists ant_anotacoes (
   ant_id int not null auto_increment,
   ant_anotacao not null varchar(256),
@@ -21,4 +21,4 @@ create table if not exists ant_anotacoes (
   ant_data_atualizado datetime DEFAULT CURRENT_TIMESTAMP,
   usr_id bigint unsigned not null,
   constraint usr_usuario_anotacoes foreign key (usr_id) references usr_usuario(usr_id)
-)
+); */
