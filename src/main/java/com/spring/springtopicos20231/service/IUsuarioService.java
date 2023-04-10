@@ -12,4 +12,6 @@ public interface IUsuarioService {
 
     public Usuario buscarPorId(Long id);
 
+    public Usuario adicionarAutorizacao(Long idUsuario, Long idAutorizacao);
+
 }
