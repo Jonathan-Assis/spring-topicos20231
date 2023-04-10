@@ -1,3 +1,6 @@
+drop user if exists 'user'@'localhost';
+drop schema if exists anotaca
+
 create schema if not exists anotacao;
 
 use anotacao;
@@ -12,9 +15,9 @@ create table if not exists usr_usuario (
   usr_senha varchar(150) not null,
   primary key (usr_id),
   unique key uni_usuario_nome (usr_nome)
-);
 
-insert into usr_usuario(usr_nome,usr_senha) values("admin","senha123");
+insert into usr_usuario (usr_nome, usr_senha)
+  values ('admin', '$2a$10$i3.Z8Yv1Fwl0I5SNjdCGkOTRGQjGvHjh/gMZhdc3e7LIovAklqM6C');
 
 drop table if exists ant_anotacao;
 
