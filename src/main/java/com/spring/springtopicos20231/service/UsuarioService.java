@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import com.spring.springtopicos20231.entity.Autorizacao;
@@ -31,6 +32,7 @@ public class UsuarioService implements IUsuarioService {
         return usuarioRepo.save(usuario);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Usuario> buscarTodosUsuarios() {
         return usuarioRepo.findAll();
     }
